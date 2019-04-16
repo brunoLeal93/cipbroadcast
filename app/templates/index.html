@@ -1,0 +1,202 @@
+{% extends 'base.html'%}
+
+{% block title%} Home {%endblock%}
+{%block css %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{%endblock%}
+{% block content %}
+
+    <!-- SLIDER -->
+    <section class="slider d-flex align-items-center">
+        <!-- <img src="images/slider.jpg" class="img-fluid" alt="#"> -->
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="slider-title_box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="slider-content_wrap">
+                                    <h1>Seja Bem Vindo!</h1>
+                                    <h5>Aqui você encontra Informações e Políticas de Comercialização </br>de todos os Produtos e Serviços Broadcast.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-10">
+                                <form class="form-wrap mt-4">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <input type="text" placeholder="O que você está procurando?" class="btn-group1">
+                                        <button type="submit" class="btn-form primary"><span class="icon-magnifier search-icon"></span>Buscar<i class="pe-7s-angle-right"></i></button>
+                                    </div>
+                                </form>
+                                <!--div class="slider-link">
+                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Addred</a>
+                                </div-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// SLIDER -->
+    <!--//END HEADER -->
+    <!--============================= FIND PLACES =============================-->
+    <section class="main-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="styled-heading">
+                        <h3>Explore mais Nossos Conteúdos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <a href="{{url_for('noticiosos')}}">
+                        <i class="far fa-newspaper iconmenu1"></i>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="#">
+                        <i class="fas fa-chart-line iconmenu1"></i>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="#">
+                        <i class="fas fa-tools iconmenu2"></i>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="{{url_for('ppp')}}">
+                        <i class="fas fa-sync-alt iconmenu2"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <b>Noticiosos</b>
+                </div>
+                <div class="col-3">
+                    <b>Cotações</b>
+                </div>
+                <div class="col-3">
+                    <b>Ferramentas</b>
+                </div>
+                <div class="col-3">
+                    <b>Comparador de</br> Pacotes</b>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-3">
+                    Conheça todos os cadernos disponíveis em nossas plataformas, quais são suas coberturas e suas caracteristicas.
+                </div>
+                <div class="col-3">
+                    Segmentadas por Fontes, Mercados e Classe de Ativos, descubra quais serviços dão acesso aos ativos que você procura.
+                </div>
+                <div class="col-3">
+                    Conheça nossas ferramentas e suas funcionalidades segmentadas por plataformas.
+                </div>
+                <div class="col-3">
+                    Compare os pacotes por plataformas e identifique qual melhor se adequa as necessidades do seu cliente. 
+                </div>
+            </div>
+            <!--div class="row">
+                <div class="col-md-4">
+                    <div class="find-place-img_wrap">
+                        <div class="grid">
+                            <figure class="effect-ruby">
+                                <a href="{{url_for('ppp')}}">
+                                <img src="../static/images/Screenshot_1.png"  alt="img13" />
+                                <figcaption>
+                                    <h5>Comparador de Pacotes</h5>
+                                </figcaption>
+                                </a>
+                            </figure>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="row find-img-align">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="{{url_for('noticiosos')}}">
+                                        
+                                        <img src="../static/images/find-place2.jpg" class="img-fluid" alt="img13" />
+                                        <figcaption>
+                                            <h5>Notíciosos</h5>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="#">
+                                        
+                                        <img src="{{url_for('static', filename='images/find-place3.jpg')}}" class="img-fluid" alt="img13" />
+                                        <figcaption>
+                                            <h5>Cotações</h5>
+                                            
+                                        </figcaption>
+                                            </a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row find-img-align">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <img src="{{url_for('static', filename='images/find-place4.jpg')}}" class="img-fluid" alt="img13" />
+                                        <figcaption>
+                                            <h5>Ferramentas</h5>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <img src="{{url_for('static', filename='images/find-place5.jpg')}}" class="img-fluid" alt="img13" />
+                                        <figcaption>
+                                            <h5>Outros</h5>
+                                            <p>79 Listings</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+        </div>
+    </section>
+{% endblock %}
+
+
+
+
+</body>
+
+</html>

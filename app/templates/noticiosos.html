@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block title%} Notícisos {%endblock%}
+
+{%block css %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename='css/noticiosos.css')}}">
+<!--link rel="stylesheet" href="{{url_for('static', filename='css/impressao_ppp.css')}}" media="print"-->
+{%endblock%}
+
+{% block content %}
+<div>
+
+	<div class="container-fluid">
+	  <div class="card-body" id="aenews">
+	    <h6 class="titulo"><b>AE News + Top News</b></h6>
+	    <p class="card-text">Noticiário em tempo real acompanhado das 10 notícias mais importantes do momento, produzido a partir das informações colhidas minuto a minuto pelas centenas de jornalistas da Agência Estado, locados no Brasil e com correspondentes em Londres e Nova York, cobrindo os principais centros financeiros com os números e notícias das principais economias e empresas, os desdobramentos dos mercados internacionais e seus impactos no mercado local. </p>
+	    <p class="card-text">Em paralelo às notícias em tempo real, o AE News oferece 3 (três) cenários diários de mercado financeiro com informações sobre juros, cambio, bolsas e mercados internacionais. Também publica diariamente um comentário político com agenda trançando o panorama do ambiente em Brasília.</p>
+	    <p class="card-text">Além disso, a cada hora são produzidas notas, classificadas como a <b>Hora do Mercado</b>, que atualizam os fatos econômicos e indicadores nacionais e internacionais anunciados no intervalo de uma hora com a reação no câmbio, juros e ações, captando os detalhes e permitindo a atualização permanente do leitor</p>
+	    <p class="card-text">Também, a qualquer momento, durante todo o período de negociações, são publicadas notas classificadas como <b>Pulso do Mercado</b> que captam, com agilidade e brevidade, as oscilações dos ativos em decorrência de novos acontecimentos ou movimentos técnicos.</p>
+	    <p class="card-text">Outro diferencial é o <b>Termômetro Broadcast Bolsa</b>, um sinalizador do sentimento dos profissionais do mercado para o comportamento do Ibovespa na próxima semana, divulgado as sextas feiras, por volta das 15h30. A ideia é captar a percepção de cada profissional e não a previsão das instituições financeiras.</p>
+	  </div>
+	  
+	  <div class="card-body" id="empset">
+	    <h6 class="titulo"><b>Empresas e Setores</b></h6>
+	    <p class="card-text">AE Empresas e Setores é um conteúdo que oferece notícias contextualizadas, análises e cenários sobre o mercado de capitais, as empresas e os setores mais relevantes da economia brasileira. Profissionais especializados acompanham as tendências de diversas áreas: Alimentos e Bebidas, Comércio e Serviços, Construção Civil, Educação, Energia, Financeiro, Mineração e Siderúrgica, Químico e Petroquímico, Papel e Celulose, Saúde, Transportes e Logística, Telecom e TI. O Conteúdo publica, ainda, reportagens especiais, entrevistas exclusivas e antecipa negociações e fatos que estão para acontecer no mundo corporativo. As reportagens de negócios do jornal O Estado de S. Paulo também são publicadas diariamente. Seções fixas auxiliam os profissionais de mercado e executivos de diversas áreas na tomada de decisões cotidianas, como o Fique de Olho, que indica as tendências do que deve ocorrer ao longo do dia com as principais ações, e dois Cenários diários (intraday e fechamento), que trazem a análise detalhada da movimentação de ações que se destacaram durante o pregão. Trimestralmente são publicados resultados financeiros de quase 150 empresas de capital aberto. A cobertura dos balanços das cerca de 60 companhias com maior relevância na bolsa inclui realização de projeções, com a média das estimativas de vários analistas para lucro, receita e Ebtida; publicação detalhada do balanço; acompanhamento das teleconferências e das entrevistas de executivos. </p>
+	  </div>
+
+	  <div class="card-body" id="conjfin">
+	    <h6 class="titulo"><b>Conjuntura e Finanças</b></h6>
+	    <p class="card-text">Notícias em tempo real com foco no mercado financeiro dos principais fatos políticos, econômicos e empresariais que também afetam o setor produtivo. Cobertura intensiva dos mercados de dólar, juros, títulos públicos e dos principais fatos que afetam o mercado de capitais. Acompanhamento especializado de indicadores econômicos, inflação, decisões no âmbito político e econômico e cenário internacional. Matérias online sobre as entrevistas realizadas com principais executivos, economistas, analistas e autoridade do governo federal e parlamentares. Matérias de abertura dos mercados financeiros com expectativas para os negócios. Ao final do dia, os fechamentos, com os dados da movimentação registrada e os fatos que impactaram a variação dos ativos, além das possíveis reações no dia seguinte. </p>
+	  </div>
+
+	  <div class="card-body" id="newspaper">
+	    <h6 class="titulo"><b>AE Newspaper</b></h6>
+	    <p class="card-text">Sinopse diária das notícias dos principais jornais do país, reunindo as manchetes e as informações sobre agenda. Traz também uma síntese das notícias econômicas, políticas, de negócios, do mercado financeiro, de esportes, geral, colunas, revistas e assuntos internacionais, elaborado pela estrutura jornalística da Agência Estado. </p>
+	  </div>
+	</div>
+</div>
+{% endblock %}
+
+
+{%block scripts%}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../static/js/noticiosos.js"></script>
+
+{%endblock%}

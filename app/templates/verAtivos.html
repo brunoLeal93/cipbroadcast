@@ -1,0 +1,140 @@
+{% extends 'base.html'%}
+
+{% block title%} Cotação{%endblock%}
+
+{% block content %}
+
+<div class="container-fluid">
+</br>
+		</br>
+	<div class="row">
+		<!--
+		{% if param1[2]=='1'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Inf. Disponível: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='2'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Mercado: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='3'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>C. Ativo: {{param1[1]}} </h3></div>
+		{% endif %}
+		-->
+		<form method="POST" enctype="multipart/form-data">
+			{{ form.csrf_token }}			
+			</br>
+			</br>
+
+			<!-- TXT Busca e Button-->
+			<div class="row">
+				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
+				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
+			</div>
+			</br>
+			</br>
+
+		</form>
+
+	</div>
+	
+		<div class="col-12">
+			<table id="tb_cot" class="display" style="width:100%">
+				<thead>
+					<tr>
+						<th></th>>
+						<th>Ativo</th>
+						<th>Ativo Bolsa</th>
+						<th>Descrição Ativo</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+
+<script>
+
+function format(d) {
+    return d.transcricao;
+};
+
+        var table = $('#tb_cot').DataTable( {
+        "language": {
+            "lengthMenu": "Mostrando _MENU_ registros por página",
+            "zeroRecords": "Nada encontrado",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "Nenhum registro disponível",
+            "infoFiltered": "(filtrado de _MAX_ registros no total)",
+            "search": "Buscar:"
+        },
+        "ajax": {{results}},
+        "columns":[
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            {"data":"cod_ativo"},
+            {
+                "data":"cod_ativo_bolsa",
+                "render":   function(data){return '<center>'+data+'</center>'}
+            },
+            {
+                "data":"desc_ativo",
+                "render":   function(data){return '<center>'+data+'</center>'}
+            },
+
+        ]
+    } );
+
+
+
+    // Add event listener for opening and closing details
+    $('#tb_cot tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    } );
+
+
+
+$(document).ready(function() {
+
+});
+
+
+
+
+
+
+
+{% else %}
+$(document).ready( function () {
+    $('#TabRel').DataTable({
+        "language": {
+            "lengthMenu": "Mostrando _MENU_ registros por página",
+            "zeroRecords": "Nada encontrado",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "Nenhum registro disponível",
+            "infoFiltered": "(filtrado de _MAX_ registros no total)",
+            "search": "Buscar nos Resultados:"
+        }
+    });
+} );
+{% endif%}
+</script>
+{% endblock %}

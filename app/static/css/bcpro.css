@@ -1,0 +1,20 @@
+
+.container-fluid img {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+.fixar {
+    position:fixed;
+    top: 60px;
+    background: white;
+    margin-top: 0px !important;
+    z-index: 9999;
+}
+
+body{ 
+	padding-top: 75px;
+	font-size: 1rem;
+}

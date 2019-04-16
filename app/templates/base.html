@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+
+    	<title>{% block title %}{% endblock %} - CIP Broadcast</title>
+		<!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+
+
+	{%block css %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}"-->
+    {%endblock%}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/simple-line-icons.css')}}">
+     <!--Themify Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/themify-icons.css')}}">
+   <!-- Hover Effects -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/set1.css')}}">
+   <!-- Main CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    
+	</head>
+	<body id="body">
+		{%block nav %}
+		 <div class="nav-menu">
+        <div class="bg transition">
+            <div class="container-fluid fixed">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{{url_for('home')}}">
+                                <b  style="font-family: flamablack italic">CIP</b>
+                                <img style="max-width:150px; max-height:75px; width: auto; height: auto;"src="../static/img/LOGO-BC-Institucional.png">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-menu"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                    Financeiro
+                                        <span class="icon-arrow-down"></span>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="{{url_for('bpro_terminal')}}">Terminais</a>
+                                            <a class="dropdown-item" href="#">Web</a>
+                                            <a class="dropdown-item" href="#">Wallboard</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                    Agronegócios
+                                        <span class="icon-arrow-down"></span>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Terminais</a>
+                                            <a class="dropdown-item" href="#">Web</a>
+                                            <a class="dropdown-item" href="#">Wallboard</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Político</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Trading News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Data Feed</a>
+                                    </li>
+                                    <li>
+                                        <input type="text" placeholder="Search...">
+                                        <div class="icon"></div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		{% endblock %}
+		{%block content%}{% endblock %}
+        
+		<footer class="main-block dark-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <p>PPP Digital 2019 - <a href="http://www.broadcast.com.br/">AE Broadcast</a></p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <ul>
+                                <li><a href="https://www.facebook.com/AEbroadcast/"><span class="ti-facebook"></span></a></li>
+                                <li><a href="https://twitter.com/AgenciaEstado"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="https://www.instagram.com/aebroadcast/"><span class="ti-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type=text/javascript>
+            $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        </script>
+        {%block scripts%}
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+		<!-- jQuery, Bootstrap JS. -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>  -->
+		<script src="../static/js/popper.min.js"></script>
+        <script src="../static/js/busca.js"></script>
+
+		<script>
+			$(window).scroll(function() {
+				// 100 = The point you would like to fade the nav in.
+
+				if ($(window).scrollTop() > 100) {
+
+					$('.fixed').addClass('is-sticky');
+
+				} else {
+
+					$('.fixed').removeClass('is-sticky');
+
+				};
+			});
+		</script>
+{%endblock%}
+	</body>
+<html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        .col            {text-align: center;}
+        .row            {border-bottom: 1px solid #dedede}
+        i.fa-times      {color: red;}
+        i.fa-check      {color: green;}
+    </style>
+
+
+  </head>
+  <body>
+    <div class="menu">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2">Conteúdos</div>
+                <div class="col" id="trade-lb">Trade</div>
+                <div class="col" id="trade-aai-lb">Trade AAI</div>
+                <div class="col" id="conjuntura-lb">Conjuntura</div>
+                <div class="col" id="mercados-bs-lb">Mercados</br>Buy-Side</div>
+                <div class="col" id="mercados-lb">Mercados</div>
+                <div class="col" id="news-bs-lb">News Buy-Side</div>
+                <div class="col" id="news-lb">News</div>
+                <div class="col" id="analises-lb">Análises</div>
+            </div>
+        </div>
+        <!-- CONTENT COLLAPSE 01-->
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2"><i id="iconN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticia()" class="text-decoration-none" data-toggle="collapse" href="#Noticias-collapse">Notícias</a></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+            </div>
+        </div>
+        <div class="collapse" id="Noticias-collapse">
+            <div class="container-fluid">
+                <!--AE NEWS + TOP NEWS-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">AE News + Top News</div>
+                    <div class="col" id="n-aenews-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-aenews-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-aenews-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Empresas e Setores-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Empresas e Setores</div>
+                    <div class="col" id="n-empset-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Conjuntura e Finanças-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Conjuntura e Finanças</div>
+                    <div class="col" id="n-conjfin-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjfin-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjfin-news-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-news"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-analises"><i class="fas fa-times"></i></div>
+                </div>
+                <!--Conjuntura e Negócios-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Conjuntura e Negócios</div>
+                    <div class="col" id="n-conjneg-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-news-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-news"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-analises"><i class="fas fa-times"></i></div>
+                </div>
+                <!--Newspaper (caderno)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Newspaper (caderno)</div>
+                    <div class="col" id="n-cadnewspaper-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Projeções Broadcast-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Projeções Broadcast</div>
+                    <div class="col" id="n-projecoes-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-projecoes-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-projecoes-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Colunistas (Broadcast e Estadão)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Colunistas (Broadcast e Estadão)</div>
+                    <div class="col" id="n-colunistas-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Artigos-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Artigos</div>
+                    <div class="col" id="n-artigos-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-artigos-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-artigos-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Broadcast TV)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Broadcast TV</div>
+                    <div class="col" id="n-bctv-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Release-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Release</div>
+                    <div class="col" id="n-release-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Broadcast TV)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-2 px-lg-5">Broadcast TV</div>
+                    <div class="col" id="n-bctv-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-2 px-lg-5"><i id="iconNContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticiaContri()"class="text-decoration-none" data-toggle="collapse" href="#Noticias-ctbd-collapse">Contribuidores</a></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+                <!-- CONTENT COLLAPSE 01A-->
+                <div class="collapse" id="Noticias-ctbd-collapse">
+                    <div>
+                        <!--Agência Bovespa-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Agência Bovespa</div>
+                            <div class="col" id="n-ctbd-agbov-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov--trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência CEBDS-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Agência CEBDS</div>
+                            <div class="col" id="n-ctbd-agcebds-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência CNA/SENAR-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Agência CNA/SENAR</div>
+                            <div class="col" id="n-ctbd-agcnasenar-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência STJ-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Agência STJ</div>
+                            <div class="col" id="n-ctbd-agstj-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--CEAGESP-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">CEAGESP</div>
+                            <div class="col" id="n-ctbd-ceagesp-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Relatórios Bradesco-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Relatórios Bradesco</div>
+                            <div class="col" id="n-ctbd-relbra-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relbra-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Relatórios Research-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-2 px-lg-5">Relatórios Research</div>
+                            <div class="col" id="n-ctbd-relresearch-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Cotações-->
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2"><a class="text-decoration-none" data-toggle="collapse" href="#collapse02">Cotações</a></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-times"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-times"></i></div>
+                <div class="col"><i class="fas fa-times"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-check"></i></div>
+                <div class="col"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+        <div class="collapse" id="collapse02">
+            <div class="container-fluid ">
+                <div class="row align-items-center">
+                    <div class="col-2 px-lg-5">Description teste de oitenta e um</div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-2 px-lg-5">Description teste de oitenta e um</div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-2 px-lg-5">Description teste de oitenta e um</div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function iconNoticia(){
+            if($(document.getElementById("Noticias-collapse")).hasClass('show')){
+                $('#iconN').removeClass('fa-angle-down');
+                $('#icon').addClass('fa-angle-right');
+            } else{
+                $('#iconN').removeClass('fa-angle-right');
+                $('#iconN').addClass('fa-angle-down');
+            }
+        }
+
+        function iconNoticiaContri(){
+            if($(document.getElementById("Noticias-ctbd-collapse")).hasClass('show')){
+                $('#iconNContri').removeClass('fa-angle-down');
+                $('#iconNContri').addClass('fa-angle-right');
+            } else{
+                $('#iconNContri').removeClass('fa-angle-right');
+                $('#iconNContri').addClass('fa-angle-down');
+            }
+        }
+    </script>
+  </body>
+</html>

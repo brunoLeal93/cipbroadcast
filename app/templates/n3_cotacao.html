@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+
+{% block title%} Cotação{%endblock%}
+
+{%block css %}
+<style>
+    body{ padding-top: 100px}
+
+</style>
+{%endblock%}
+
+{% block content %}
+
+<div class="container">
+	<div class="row d-flex justify-content-center">
+
+		<div class="col-md-12">
+			<form method="POST" enctype="multipart/form-data">
+			{{ form.csrf_token }}
+
+			</br>
+			</br>
+
+			<!-- TXT Busca e Button-->
+			<div class="row">
+				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
+				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
+			</div>
+			</br>
+
+			</br>
+
+		</form>
+		</div>
+
+	</div>
+
+		<div class="col-12">
+			<table id="tb_cot" class="display" style="width:100%">
+				<thead>
+					<tr>
+
+						<th>Fonte</th>
+						<th>Informações Disp.</th>
+						<th>Mercado</th>
+						<th>Classe Ativo</th>
+						<th></th>
+
+					</tr>
+				</thead>
+				<tbody>
+					{% for x in results %}
+					<tr>
+
+						<td>{{x['fonte_ativo']}}</td>
+						<td>
+							{{x['inf_disp'] }}
+						</td>
+						<td>
+							{{x['merc_ativo']}}
+						</td>
+						<td>
+							{{x['classe_ativo']}}
+						</td>
+						<td>
+							<a href="{{ url_for('verAtivos', param=param1[0]+'-'+param1[1]+'-'+param1[2]) }}">Ver Ativos</a>
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+    });
+
+{% endblock %}
