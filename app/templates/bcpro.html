@@ -11,9 +11,9 @@
 {% block content %}
     <div>
     <div class="container-fluid">
-        </br>
-      <h1 class="text-primary">Broadcast+</h1>
-      <p>Produto orientado ao mercado financeiro profissional, com informações e conteúdo analítico que permite a monitoração das movitações dos mercados nacionais e internacionais, avaliando as tendências e os riscos inerentes antes de tomar uma decisão.</p>
+      <img style="text-align: center;" src="../static/img/LOGO-BC-Financeiro.png">
+      
+      <p>O Broadcast Profissional é uma plataforma de informações em tempo real que reúne dados, cotações, notícias e análises sobre os principais mercados nacionais e internacionais. A combinação das redações da Agência Estado e do Estadão, juntamente com uma série de parceiros como consultorias especializadas e analistas de mercado trazem informações sobre acontecimentos no Brasil e no mundo em tempo real com exclusividade para os seus leitores, permitindo um acompanhamento qualificado dos eventos que impactam a volatilidade dos principais setores da economia com uma linguagem objetiva e concisa</p>
       <p>Ao se tornar usuário do Broadcast+, independentemente do pacote adquirido, as seguintes cotações e funcionalidades estão inclusas:</p>
 
       <!--Cotações-->
@@ -57,11 +57,7 @@
       </div>
       <!--Fim Funcionalidades-->
       <!--Pacotes-->
-
-      <div class="container">
-        <p><h4>Pacotes</h4></p>
-      </div>
-
+      <h4>Pacotes:</h4>
       <!--Pacotes-->
       <div class="accordion md-accordion" id="accordionPacotes" role="tablist" aria-multiselectable="true">
 
@@ -69,15 +65,47 @@
           <div class="card">
             <!-- Card header -->
               <div class="card-header " role="tab" id="headingTrade">
-                <a data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseTrade" >
-                  <h5 class="mb-0">
-                    Broadcast Trade <span style="float: right"> R$280</span>
-                  </h5>
+                <a id="pctTrade" onclick="pctTrade()" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseTrade" >
+                  <h6 class="mb-0">
+                    Broadcast Trade <span style="float: right"> R$280</span><i id="iconTrade" class="fa fa-angle-down"></i>
+                  </h6>
                 </a>
               </div>
             <!-- Card body -->
               <div id="collapseTrade" class="collapse" role="tabpanel" aria-labelledby="headingTrade" data-parent="#accordionPacotes">
                 <div class="card-body">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-desc-trade-tab" data-toggle="pill" href="#pills-desc-trade" role="tab" aria-controls="pills-home" aria-selected="true">Descrição</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pganhos-trade-tab" data-toggle="pill" href="#pills-pganhos-trade" role="tab" aria-controls="pills-profile" aria-selected="false">Principais Ganhos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-desc-trade" role="tabpanel" aria-labelledby="pills-desc-trade-tab">...</div>
+                      <div class="tab-pane fade" id="pills-pganhos-trade" role="tabpanel" aria-labelledby="pills-pganhos-trade-tab">
+                          <strong>Notícias</strong>
+                          <ul>
+                            <li>Conjuntura & Negócios</li>
+                            <li>Newspaper</li>
+                            <li>Broadcast TV</li>
+                            <li>Relatórios de Research</li>
+                            <li>Estadão (Economia, Jornal Digital)</li>
+                            <li>Contribuidores - Agência Bovespa, CETIP, STJ, PR Newswire, CNA/Senar, CEAGESP</li>
+                            <li>Releases</li>
+                          </ul>
+                          <strong>Add-ons Disponíveis para Contratação</strong>
+                          <ul>
+                            <li><a href="#">(BC-14167) - Análise Fundamentalista - Capital Aberto</a></li>
+                            <li><a href="#">(BC-19724) - Análise Fundamentalista - Capital Aberto e Fechado</a></li>
+                            <li><a href="#">(BC-14166) - Fundos de Investimentos</a></li>
+                            <li><a href="#">(BC-)</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                  
+                  <!--
                   <strong>Notícias</strong>
                   <ul>
                     <li>Conjuntura & Negócios</li>
@@ -95,6 +123,7 @@
                     <li><a href="#">(BC-14166) - Fundos de Investimentos</a></li>
                     <li><a href="#">(BC-)</a></li>
                   </ul>
+                -->
                 </div>
               </div>
           </div>
@@ -103,15 +132,45 @@
           <div class="card">
               <!-- Card header -->
               <div class="card-header" role="tab" id="headingConj">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseConj" aria-expanded="false" aria-controls="collapseConj">
-                  <h5 class="mb-0">
-                    Broadcast Conjuntura<span style="float: right"> R$460</span><i class="fa fa-angle-down rotate-icon"></i>
-                  </h5>
+                <a id="pctConjutura" onclick="pctConjuntura()" class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseConj" aria-expanded="false" aria-controls="collapseConj">
+                  <h6 class="mb-0">
+                    Broadcast Conjuntura <span style="float: right"> R$460</span><i id="iconConjuntura" class="fa fa-angle-down"></i>
+                  </h6>
                 </a>
               </div>
               <!-- Card body -->
               <div id="collapseConj" class="collapse" role="tabpanel" aria-labelledby="headingConj" data-parent="#accordionPacotes">
                 <div class="card-body">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-desc-conjuntura-tab" data-toggle="pill" href="#pills-desc-conjuntura" role="tab" aria-controls="pills-home" aria-selected="true">Descrição</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pganhos-conjuntura-tab" data-toggle="pill" href="#pills-pganhos-conjuntura" role="tab" aria-controls="pills-profile" aria-selected="false">Principais Ganhos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-desc-conjuntura" role="tabpanel" aria-labelledby="pills-desc-conjuntura-tab">
+                          <p>Já com notícias em tempo real com foco no mercado financeiro dos principais fatos políticos, econômicos e empresariais que afetam o setor produtivo, o pacote <b>Broadcast Conjuntura</b> oferece os cadernos "Conjuntura e Finanças" e "Conjuntura e Negócios" que realizam uma cobertura completa e intensiva dos mercados de dólar, juros, títulos públicos e dos principais fatos que também  afetam o mercado de capitais. Dando um acompanhamento especializado de indicadores econômicos, inflação, decisões no âmbito político e econômico e cenário internacional.</p>
+                          <p>Além de toda a corbertura noticisa, este pacote de conteúdos possui dados em delay das principais Bolsas Mundiais, dados em tempo real de Taxas e Indicadores Macroeconômicos Brasil e internacional, Libor e paridades das principais moedas do mundo, além de dados de contribuição de Grandes Bancos, Corretoras e Assets sobre Câmbio e Renda Fixa. </p>
+                          <p><a href="#">Clique aqui</a> para acessar o descritivo completo do pacote.</p>
+                      </div>
+                      <div class="tab-pane fade" id="pills-pganhos-conjuntura" role="tabpanel" aria-labelledby="pills-pganhos-conjuntura-tab">
+                          <p><strong>Broadcast Trade (+)</strong></p>
+                          <ul>
+                            <strong>Cotações</strong>
+                            <ul class="a">
+                              <li>CDS (Credit Default Swap) - Índice Markit</li>
+                            </ul>
+                            <strong>Notícias</strong>
+                            <ul class="a">
+                              <li>Conjuntura & Finanças</li>
+                              <li>Estadão (Política, Finanças)</li>
+                            </ul>
+                          </ul>
+                      </div>
+                    </div>
+                  <!--
                   <p><strong>Broadcast Trade (+)</strong></p>
                   <ul>
                     <strong>Cotações</strong>
@@ -124,6 +183,7 @@
                       <li>Estadão (Política, Finanças)</li>
                     </ul>
                   </ul>
+                  -->
                 </div>
               </div>
           </div>
@@ -132,15 +192,48 @@
           <div class="card">
               <!-- Card header -->
               <div class="card-header" role="tab" id="headingMerc">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseMerc" aria-expanded="false" aria-controls="collapseMerc">
-                  <h5 class="mb-0">
-                    Broadcast Mercados <span style="float: right"> R$770</span><i class="fa fa-angle-down rotate-icon"></i>
-                  </h5>
+                <a id="pctMercados" onclick="pctMercados()" class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseMerc" aria-expanded="false" aria-controls="collapseMerc">
+                  <h6 >
+                    Broadcast Mercados <span style="float: right"> R$770</span><i id="iconMercados" class="fa fa-angle-down"></i>
+                  </h6>
                 </a>
               </div>
               <!-- Card body -->
               <div id="collapseMerc" class="collapse" role="tabpanel" aria-labelledby="headingMerc" data-parent="#accordionPacotes">
                 <div class="card-body">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-desc--mercadostab" data-toggle="pill" href="#pills-desc-mercados" role="tab" aria-controls="pills-home" aria-selected="true">Descritivo</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pganhos--mercadostab" data-toggle="pill" href="#pills-pganhos-mercados" role="tab" aria-controls="pills-profile" aria-selected="false">Principais Ganhos</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-desc-mercados" role="tabpanel" aria-labelledby="pills-desc-mercados-tab">
+                          <p>Com entrevistas exclusivas e reportagens especiais sobre decisões e bastidores, antecipação e divulgação dos principais fatos sobre as empresas de capital aberto, incluindo operações de fusões e aquisições, planos de investimentos, balanços, fatos relevantes, dividendos, reestruturação, emissões de dívidas e desempenho das ações. O pacote <b>Broadcast Mercados</b> trás notícias, análises e cenários das empresas listadas na B3 e dos principais setores da economia brasileira.</p>
+                          <p>Além de toda a corbertura noticisa, este pacote  contempla também dados em Delay das principais Bolsas Mundiais, dados em tempo real de Taxas e Indicadores Macroeconômicos Brasil e internacional, Preços Fisicos e Indicadores calculados pelo CEPEA,  Libor e mais de 2.000 paridades de moedas do mundo, além dados de contribuição de Grandes Bancos, Corretoras e Assets sobre Câmbio e Renda Fixa.</p>
+                          <p><a href="#">Clique aqui</a> para acessar o descritivo completo do pacote.</p>
+                        </div>
+                      <div class="tab-pane fade" id="pills-pganhos-mercados" role="tabpanel" aria-labelledby="pills-pganhos-mercados-tab">
+                          <p><strong>Broadcast Conjuntura (+)</strong></p>
+                          <ul>
+                            <strong>Cotações</strong>
+                            <ul class="a">
+                              <li>Câmbio - Todas as Paridades e Forward</li>
+                              <li>Commodities - Metais, FOB/Exportação</li>
+                              <li>Renda Fixa - Treasuries, Títulos Soberanos G7 e LatAm, Contribuidores</li>
+                              <li>Taxas e Indicadores - Juros/Moedas dos BC Mundiais, moedas BNDES, Índices Anbima</li>
+                            </ul>
+                            <strong>Notícias</strong>
+                            <ul class="a">
+                              <li>Empresas & Setores</li>
+                            </ul>
+                          </ul>
+                      </div>
+                    </div>
+                  <!--
                   <p><strong>Broadcast Conjuntura (+)</strong></p>
                   <ul>
                     <strong>Cotações</strong>
@@ -155,6 +248,7 @@
                       <li>Empresas & Setores</li>
                     </ul>
                   </ul>
+                  -->
                 </div>
               </div>
           </div>
@@ -163,15 +257,42 @@
           <div class="card">
               <!-- Card header -->
               <div class="card-header" role="tab" id="headingNews">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseNews" aria-expanded="false" aria-controls="collapseNews">
-                  <h5 class="mb-0">
-                    Broadcast News <span style="float: right"> R$1500</span><i class="fa fa-angle-down rotate-icon"></i>
-                  </h5>
+                <a id="pctNews" onclick="pctNews()" class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseNews" aria-expanded="false" aria-controls="collapseNews">
+                  <h6 class="mb-0">
+                    Broadcast News <span style="float: right"> R$1500</span><i id="iconNews" class="fa fa-angle-down"></i>
+                  </h6>
                 </a>
               </div>
               <!-- Card body -->
               <div id="collapseNews" class="collapse" role="tabpanel" aria-labelledby="headingNews" data-parent="#accordionPacotes">
                 <div class="card-body">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-desc-news-tab" data-toggle="pill" href="#pills-desc-news" role="tab" aria-controls="pills-home" aria-selected="true">Descrição</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pganhos-news-tab" data-toggle="pill" href="#pills-pganhos-news" role="tab" aria-controls="pills-profile" aria-selected="false">Principais Ganhos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-desc-news" role="tabpanel" aria-labelledby="pills-desc-news-tab">...</div>
+                      <div class="tab-pane fade" id="pills-pganhos-news" role="tabpanel" aria-labelledby="pills-pganhos-news-tab">
+                          <p><strong>Broadcast Mercados (+)</strong></p>
+                          <ul>
+                          <strong>Notícias</strong>
+                                <ul class="a">
+                                  <li>AE News</li>
+                                  <li>Top News</li>
+                                  <li>Newspaper (E-mail/PDF)</li>
+                                  <li>Colunistas Broadcast e Estadão</li>
+                                  <li>AE Projeções</li>
+                                  <li>Análises e Cenários Empresas & Setores</li>
+                                  <li>Artigos</li>
+                                </ul>
+                            </ul>
+                      </div>
+                    </div>
+                  <!--
                   <p><strong>Broadcast Mercados (+)</strong></p>
                   <ul>
                   <strong>Notícias</strong>
@@ -185,6 +306,7 @@
                           <li>Artigos</li>
                         </ul>
                     </ul>
+                    -->
                 </div>
               </div>
           </div>
@@ -193,15 +315,39 @@
           <div class="card">
               <!-- Card header -->
               <div class="card-header" role="tab" id="headingAnalise">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseAnalise" aria-expanded="false" aria-controls="collapseAnalise">
-                  <h5 class="mb-0">
-                    Broadcast Análises <span style="float: right"> R$2500</span><i class="fa fa-angle-down rotate-icon"></i>
-                  </h5>
+                <a id="pctAnalises" onclick="pctAnalises()" class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseAnalises" aria-expanded="false" aria-controls="collapseAnalise">
+                  <h6 class="mb-0">
+                    Broadcast Análises <span style="float: right"> R$2500</span><i id="iconAnalises" class="fa fa-angle-down"></i>
+                  </h6>
                 </a>
               </div>
               <!-- Card body -->
-              <div id="collapseAnalise" class="collapse" role="tabpanel" aria-labelledby="headingAnalise" data-parent="#accordionPacotes">
+              <div id="collapseAnalises" class="collapse" role="tabpanel" aria-labelledby="headingAnalise" data-parent="#accordionPacotes">
                 <div class="card-body">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-desc-analises-tab" data-toggle="pill" href="#pills-desc-analises" role="tab" aria-controls="pills-home" aria-selected="true">Descrição</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pganhos-analises-tab" data-toggle="pill" href="#pills-pganhos-analises" role="tab" aria-controls="pills-profile" aria-selected="false">Principais Ganhos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-desc-analises" role="tabpanel" aria-labelledby="pills-desc-analises-tab">...</div>
+                      <div class="tab-pane fade" id="pills-pganhos-analises" role="tabpanel" aria-labelledby="pills-pganhos-analises-tab">
+                          <p><strong>Broadcast News (+)</strong></p>
+                          <ul>
+                            <strong>Add-ons Inclusos</strong>
+                            <ul class="a">
+                              <li><a href="#">Análise Fundamentalista</a></li>
+                              <li><a href="#">Fundos de Investimento</a></li>
+                              <li><a href="#">Agro</a></li>
+                              <li><a href="#">Político</a></li>
+                            </ul>
+                          </ul>
+                      </div>
+                    </div>
+                  <!--
                   <p><strong>Broadcast News (+)</strong></p>
                   <ul>
                     <strong>Add-ons Inclusos</strong>
@@ -212,6 +358,7 @@
                       <li><a href="#">Político</a></li>
                     </ul>
                   </ul>
+                  -->
                 </div>
               </div>
           </div>

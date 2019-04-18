@@ -132,7 +132,7 @@
                 <div class="container-fluid">
                     <!--AE NEWS + TOP NEWS-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2"><a href="{{ url_for('noticiosos', _anchor='aenews') }}" data-placement="right" data-toggle="tooltip" data-html="true" title="Noticiário em <b>Tempo Real</b> acompanhado das 10 notícias mais importantes do momento, cobrindo os principais centros financeiros com os números e notícias das principais economias e empresas, além dos desdobramentos dos mercados internacionais e seus impactos no mercado local.">AE News + Top News</a> <!--i class="fas fa-info-circle nprint"></i--></div>
+                        <div class="col-4  n2"><a href="{{url_for('noticiosos')}}" data-placement="right" data-toggle="tooltip" data-html="true" title="Noticiário em <b>Tempo Real</b> acompanhado das 10 notícias mais importantes do momento, cobrindo os principais centros financeiros com os números e notícias das principais economias e empresas, além dos desdobramentos dos mercados internacionais e seus impactos no mercado local.">AE News + Top News</a> <!--i class="fas fa-info-circle nprint"></i--></div>
                         <div class="col"  id="n-aenews-trade"><i class="fas fa-times"></i></div>
                         <div class="col"  id="n-aenews-conjuntu
                         ra"><i class="fas fa-times"></i></div>
@@ -272,10 +272,10 @@
                     </div>
                     <!-- Contribuidores Noticias-->
                     <div class="collapse" id="Noticias-ctbd-collapse">
-                        <div class="container-fluid">
+                        <div>
                             <!--Agência Bovespa-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5">Agência Bovespa</div>
+                                <div class="col-4 n3">Agência Bovespa</div>
                                 <div class="col"  id="n-ctbd-agbov-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agbov-conjuntura"><i class="fas fa-check"></i></div>
@@ -287,7 +287,7 @@
                             </div>
                             <!--Agência CEBDS-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5">Agência CEBDS</div>
+                                <div class="col-4  n3">Agência CEBDS</div>
                                 <div class="col"  id="n-ctbd-agcebds-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agcebds-conjuntura"><i class="fas fa-check"></i></div>
@@ -308,7 +308,7 @@
                             </div>-->
                             <!--Agência STJ-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5">Agência STJ</div>
+                                <div class="col-4  n3">Agência STJ</div>
                                 <div class="col"  id="n-ctbd-agstj-trade"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-agstj-conjuntura"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-agstj-mercados"><i class="fas fa-check"></i></div>
@@ -317,7 +317,7 @@
                             </div>
                             <!--NGO Corretora-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5" title="Relatórios com foco em Câmbio">NGO Corretora</div>
+                                <div class="col-4  n3" title="Relatórios com foco em Câmbio">NGO Corretora</div>
                                 <div class="col"  id="n-ctbd-ngo-trade"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-ngo-conjuntura"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-ngo-mercados"><i class="fas fa-check"></i></div>
@@ -338,7 +338,7 @@
                             </div> -->
                             <!--Relatórios Macroeconômicos-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5" title="Contribuidores: Bradesco, Itau e SmartBrain">Relatórios Macroeconômicos</div>
+                                <div class="col-4  n3" title="Contribuidores: Bradesco, Itau e SmartBrain">Relatórios Macroeconômicos</div>
                                 <div class="col"  id="n-ctbd-relmacro-trade"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-relmacro-conjuntura"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-relmacro-mercados"><i class="fas fa-check"></i></div>
@@ -347,7 +347,7 @@
                             </div>
                             <!--Relatórios Research-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5" title="Contribuidores: Ativa Investimentos, Banco Votorantim, Eleven Financial, Elite Investimentos, H.Commcor, Mirae Asset, Modalmais, Necton Corretora, Planner Corretora, Rico Investimentos, Socopa, Terra Investimentos e Toro Investimentos">Relatórios de Research</div>
+                                <div class="col-4  n3" title="Contribuidores: Ativa Investimentos, Banco Votorantim, Eleven Financial, Elite Investimentos, H.Commcor, Mirae Asset, Modalmais, Necton Corretora, Planner Corretora, Rico Investimentos, Socopa, Terra Investimentos e Toro Investimentos">Relatórios de Research</div>
                                 <div class="col"  id="n-ctbd-relresearch-trade"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-relresearch-conjuntura"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-relresearch-mercados"><i class="fas fa-check"></i></div>
@@ -356,7 +356,7 @@
                             </div>
                             <!--Relatórios Agrícolas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5" title="Contribuidores: AgResource, Bradesco e Cepea">Relatórios Agrícolas</div>
+                                <div class="col-4  n3" title="Contribuidores: AgResource, Bradesco e Cepea">Relatórios Agrícolas</div>
                                 <div class="col"  id="n-ctbd-relagricolas-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relagricolas-conjuntura"><i class="fas fa-check"></i></div>
@@ -368,7 +368,7 @@
                             </div>
                             <!--Relatórios Criptomoedas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4  px-lg-5" title="Contribuidores: ABCripto, Coinext e Cointimes">Relatórios Criptomoedas</div>
+                                <div class="col-4  n3" title="Contribuidores: ABCripto, Coinext e Cointimes">Relatórios Criptomoedas</div>
                                 <div class="col"  id="n-ctbd-relcriptomoedas-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relcriptomoedas-conjuntura"><i class="fas fa-check"></i></div>
@@ -923,7 +923,7 @@
                     </div>
                     <!--Treasuries Americanas-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  px-lg-5" title="">Treasuries Americanas <div class="realtime"><b>RT</b></div></div>
+                        <div class="col-4 n2" title="">Treasuries Americanas <div class="realtime"><b>RT</b></div></div>
                         <div class="col"  id="c-tresuaries-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="c-tresuaries-conjuntura"><i class="fas fa-times"></i></div>
@@ -1070,7 +1070,7 @@
                             <!--Cap. Aberto e Cap. Fechado-->
                             <div class="row align-items-center destacar">
                                 <div class="col-4  n3">
-                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso a dados de Capital Aberto e Fechado">Capital Aberto e Fechado</span> 
+                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso a dados Empresas de Capital Aberto e Fechado">Capital Aberto e Fechado</span> 
                                     <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
                                     <b>Cód. Serv:</b> BC-19724</br>
                                     <b>Custo:</b> R$450,00</br>
@@ -1085,7 +1085,7 @@
                             <!--Capital Aberto-->
                             <div class="row align-items-center destacar">
                                 <div class="col-4  n3" title="Cód.Serv: BC-14167 | Custo: R$ 136,40">
-                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso <u>Somente</u> a dados de Capital Aberto">Capital Aberto</span> 
+                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso <u>Somente</u> a dados Empresas de Capital Aberto">Capital Aberto</span> 
                                     <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
                                         <b>Cód. Serv:</b> BC-14167</br>
                                         <b>Custo:</b> R$136,40</br>
@@ -1095,12 +1095,12 @@
                                 <div class="col"  id="ad-mod-af-capabe-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-af-capabe-mercados"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-af-capabe-news"><i class="fas fa-plus"></i></div>
-                                <div class="col"  id="ad-mod-af-capabe-analises"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="ad-mod-af-capabe-analises"><i class="fas fa-check"></i></div>
                             </div>
                             <!--Capital Fechado-->
                             <div class="row align-items-center destacar">
                                 <div class="col-4  n3">
-                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso <u>Somente</u> a dados de Capital Fechado">Capital Fechado</span>  
+                                    <span data-placement="right" data-toggle="tooltip" data-html="true" title="Ferramenta de Análise Fundamentalista com acesso <u>Somente</u> a dados de Empresas de Capital Fechado">Capital Fechado</span>  
                                     <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
                                     <b>Cód. Serv:</b> BC-19726</br>
                                     <b>Custo:</b> R$250,00</br>
@@ -1180,7 +1180,13 @@
                     </div-->
                     <!--Arko America Latina-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2" title="Cód.Serv: BC-1669 | Custo: R$ 386,34">Arko America Latina</div>
+                        <div class="col-4 n2">
+                                <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Arko America Latina</a>
+                                <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                <b>Cód. Serv:</b> BC-1669</br>
+                                <b>Custo:</b> R$386,34</br>
+                                <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-arko-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-arko-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-arko-mercados"><i class="fas fa-plus"></i></div>
@@ -1189,7 +1195,13 @@
                     </div>
                     <!--Bom dia Mercado-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2" title="Cód.Serv: BC-1403 | Custo: R$ 83,43">Bom dia Mercado</div>
+                        <div class="col-4 n2">
+                                <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Bom dia Mercado</a>
+                                <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                <b>Cód. Serv:</b> BC-1403</br>
+                                <b>Custo:</b> R$83,43</br>
+                                <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-bdm-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-bdm-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-bdm-mercados"><i class="fas fa-plus"></i></div>
@@ -1209,7 +1221,13 @@
                         <div>
                             <!--Commodities News-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4 n3" title="Cód.Serv: BC-1103 | Custo: R$95,00">Commodities News</div>
+                                <div class="col-4 n3">
+                                        <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Commodities News</a>
+                                        <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                        <b>Cód. Serv:</b> BC-1103</br>
+                                        <b>Custo:</b> R$95,00</br>
+                                        <b>Demonstração: 30 dias"></i>
+                                </div>
                                 <div class="col"  id="ad-n-djn-cn-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-cn-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-cn-mercados"><i class="fas fa-plus"></i></div>
@@ -1218,7 +1236,13 @@
                             </div>
                             <!--Energy News-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4 n3" title="Cód.Serv: BC-1103 | Custo: R$95,00">Energy News</div>
+                                <div class="col-4 n3">
+                                        <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Energy News</a>
+                                        <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                        <b>Cód. Serv:</b> BC-1322</br>
+                                        <b>Custo:</b> R$70,00</br>
+                                        <b>Demonstração: 30 dias"></i>
+                                </div>
                                 <div class="col"  id="ad-n-djn-enn-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-enn-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-enn-mercados"><i class="fas fa-plus"></i></div>
@@ -1227,7 +1251,13 @@
                             </div>
                             <!--Equities News-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4 n3" title="Cód.Serv: BC-1103 | Custo: R$95,00">Equities News</div>
+                                <div class="col-4 n3">
+                                        <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Equities News</a>
+                                        <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                        <b>Cód. Serv:</b> BC-1315</br>
+                                        <b>Custo:</b> R$95,00</br>
+                                        <b>Demonstração: 30 dias"></i>
+                                </div>
                                 <div class="col"  id="ad-n-djn-eqn-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-eqn-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-eqn-mercados"><i class="fas fa-plus"></i></div>
@@ -1236,7 +1266,13 @@
                             </div>
                             <!--Financial News-->
                             <div class="row align-items-center destacar">
-                                <div class="col-4 n3" title="Cód.Serv: BC-1103 | Custo: R$95,00">Financial News</div>
+                                <div class="col-4 n3">
+                                        <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Financial News</a>
+                                        <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                        <b>Cód. Serv:</b> BC-1103</br>
+                                        <b>Custo:</b> R$155,00</br>
+                                        <b>Demonstração: 30 dias"></i>
+                                </div>
                                 <div class="col"  id="ad-n-djn-fn-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-fn-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-fn-mercados"><i class="fas fa-plus"></i></div>
@@ -1247,7 +1283,13 @@
                     </div>
                     <!--Feed Político-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4 n2" title="Cód.Ser: BC-13783 | Custo: R$ 180,00">Feed Político</div>
+                        <div class="col-4  n2">
+                                <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Feed Político</a>
+                                <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                <b>Cód. Serv:</b> BC-13783</br>
+                                <b>Custo:</b> R$180,00</br>
+                                <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-pol-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-pol-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-pol-mercados"><i class="fas fa-plus"></i></div>
@@ -1256,7 +1298,13 @@
                     </div>
                     <!--Newsletter Milho & Soja-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19081|Custo: R$ 79,57">Newsletter Milho & Soja</div>
+                        <div class="col-4  n2">
+                                <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Newsletter Milho & Soja</a>
+                                <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                <b>Cód. Serv:</b> BA-19081</br>
+                                <b>Custo:</b> R$64,00</br>
+                                <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-nms-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-nms-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-nms-mercados"><i class="fas fa-plus"></i></div>
@@ -1265,7 +1313,13 @@
                     </div>
                     <!--Newsletter Pecuária-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19080|Custo: R$ 64,00">Newsletter Pecuária</div>
+                        <div class="col-4  n2">
+                                <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="">Newsletter Pecuária</a>
+                                <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                                <b>Cód. Serv:</b> BA-19080</br>
+                                <b>Custo:</b> R$64,00</br>
+                                <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-npec-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-npec-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-npec-mercados"><i class="fas fa-plus"></i></div>
@@ -1274,7 +1328,15 @@
                     </div>
                     <!--Têndencias Online-->
                     <div class="row align-items-center destacar">
-                        <div class="col-4  n2" title="Cód.Serv: BC-111|Custo: R$ 301,48">Têndencias Online</div>
+                        <div class="col-4  n2">
+                            <a href="#" data-placement="right" data-toggle="tooltip" data-html="true" title="Análises on-line dos principais fatos politicos e economicos que tenham
+                            impacto nos negócios. Revela os bastidores do noticiário e antecipa tambem
+                            as principais tendencias do mercado.">Têndencias Online</a>
+                            <i class="fas fa-info-circle" data-placement="right" data-toggle="tooltip" data-html="true" title="
+                            <b>Cód. Serv:</b> BC-111</br>
+                            <b>Custo:</b> R$301,48</br>
+                            <b>Demonstração: 30 dias"></i>
+                        </div>
                         <div class="col"  id="ad-n-tenon-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-tenon-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-tenon-mercados"><i class="fas fa-plus"></i></div>

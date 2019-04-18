@@ -586,7 +586,7 @@ function controlaNivel(){
         if($(document.getElementById("c-nyse-collapse")).hasClass('show')){
             document.getElementById("CotNyseN2").click();
         }
-        if($(document.getElementById("c-ctbd-collapse")).hasClass('show')){
+        if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')){
             document.getElementById("CotContriN2").click();
         }
         if($(document.getElementById("Addon-mod-collapse")).hasClass('show')){
@@ -607,7 +607,7 @@ function controlaNivel(){
         if($(document.getElementById("Addon-c-collapse")).hasClass('show')){
             document.getElementById("AdCotN1").click();
         }
-        if($(document.getElementById("Addon-c-b3-collapse")).hasClass('show')){
+        if($(document.getElementById("ad-c-b3-collapse")).hasClass('show')){
             document.getElementById("AdCotB3N2").click();
         }
         if($(document.getElementById("ad-c-indices-collapse")).hasClass('show')){
@@ -665,7 +665,7 @@ function controlaNivel(){
             if($(document.getElementById("c-nyse-collapse")).hasClass('show')){
                 document.getElementById("CotNyseN2").click();
             }
-            if($(document.getElementById("c-ctbd-collapse")).hasClass('show')){
+            if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')){
                 document.getElementById("CotContriN2").click();
             }
             if($(document.getElementById("Addon-mod-collapse")).hasClass('show')==false){
@@ -687,7 +687,7 @@ function controlaNivel(){
             if($(document.getElementById("Addon-c-collapse")).hasClass('show')==false){
                 document.getElementById("AdCotN1").click();
             }
-            if($(document.getElementById("Addon-c-b3-collapse")).hasClass('show')){
+            if($(document.getElementById("ad-c-b3-collapse")).hasClass('show')){
                 document.getElementById("AdCotB3N2").click();
             }
             if($(document.getElementById("ad-c-indices-collapse")).hasClass('show')){
@@ -822,7 +822,7 @@ function controlaNivel(){
                     if($(document.getElementById("c-nyse-collapse")).hasClass('show')==false){
                         document.getElementById("CotNyseN2").click();
                     }
-                    if($(document.getElementById("c-ctbd-collapse")).hasClass('show')==false){
+                    if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')==false){
                         document.getElementById("CotContriN2").click();
                     }
                     if($(document.getElementById("Addon-mod-collapse")).hasClass('show')==false){
@@ -843,7 +843,7 @@ function controlaNivel(){
                     if($(document.getElementById("Addon-c-collapse")).hasClass('show')==false){
                         document.getElementById("AdCotN1").click();
                     }
-                    if($(document.getElementById("Addon-c-b3-collapse")).hasClass('show')==false){
+                    if($(document.getElementById("ad-c-b3-collapse")).hasClass('show')==false){
                         document.getElementById("AdCotB3N2").click();
                     }
                     if($(document.getElementById("ad-c-indices-collapse")).hasClass('show')==false){
