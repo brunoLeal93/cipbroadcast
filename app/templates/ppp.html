@@ -99,11 +99,11 @@
         <div class="container-fluid titulo-tabela" id="cont-incluso">
             <div class="row align-items-center" style="border-bottom: 1px solid white">
                 <div class="col-4" ></div>
-                <div class="col"  id="trade-lb"><b>Trade</b></div>
-                <div class="col"  id="conjuntura-lb"><b>Conjuntura</b></div>
-                <div class="col"  id="mercados-lb"><b>Mercados</b></div>
-                <div class="col"  id="news-lb"><b>News</b></div>
-                <div class="col"  id="analises-lb"><b>Análises</b></div>
+                <div class="col"  id="trade-lb"><b><a href="{{ url_for('bpro_terminal', _anchor='pctTrade') }}">Trade</a></b></div>
+                <div class="col"  id="conjuntura-lb"><a href="{{ url_for('bpro_terminal', _anchor='pctConjuntura') }}"><b>Conjuntura</b></a></div>
+                <div class="col"  id="mercados-lb"><a href="{{ url_for('bpro_terminal', _anchor='pctMercados') }}"><b>Mercados</b></a></div>
+                <div class="col"  id="news-lb"><a href="{{ url_for('bpro_terminal', _anchor='pctNews') }}"><b>News</b></a></div>
+                <div class="col"  id="analises-lb"><a href="{{ url_for('bpro_terminal', _anchor='pctAnalises') }}"><b>Análises</b></a></div>
             </div>
 
             <div class="row align-items-center" id="valores" >
