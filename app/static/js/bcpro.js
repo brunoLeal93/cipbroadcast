@@ -44,9 +44,9 @@ function pctAnalises(){
 $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
         var url_atual = window.location.href;
-        /*if(url_atual.match(/Trade/)){
+        if(url_atual.match(/Trade/)){
             document.getElementById("pctTrade").click();
-        }*/
+        }
         if(url_atual.match(/Conjuntura/)){
             document.getElementById("pctConjuntura").click();
         }
