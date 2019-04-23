@@ -46,6 +46,7 @@ $(document).ready(function() {
         var url_atual = window.location.href;
         if(url_atual.match(/Trade/)){
             document.getElementById("pctTrade").click();
+            console.log(1)
         }
         if(url_atual.match(/Conjuntura/)){
             document.getElementById("pctConjuntura").click();

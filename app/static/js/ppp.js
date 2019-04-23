@@ -869,7 +869,6 @@ function controlaNivel(){
 
 
 $(document).ready(function() {
-        $('.fixed').addClass('is-sticky');
         $('[data-toggle="tooltip"]').tooltip();
 
 /* Inicio do script que trava os header*/
