@@ -29,6 +29,12 @@ COPY ./cipbroadcast.conf /etc/apache2/sites-available/cipbroadcast.conf
 RUN a2ensite cipbroadcast
 RUN a2enmod headers
 
+ENV APACHE_LOCK_DIR="var/lock"
+ENV APACHE_PID_FILE="var/run/apache2.pid"
+ENV APACHE_RUN_USER="www-data"
+ENV APACHE_RUN_GROUP="www-data"
+ENV APACHE_LOG_DIR="/var/log/apache2"
+
 # Copy over the wsgi file
 COPY ./cipbroadcast.wsgi /var/www/cipbroadcast/cipbroadcast.wsgi
 
