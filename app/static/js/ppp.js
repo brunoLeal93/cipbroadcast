@@ -870,6 +870,7 @@ function controlaNivel(){
 
 $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
+        $('#selectNivel').val("1").change();
 
 /* Inicio do script que trava os header*/
         var offset1 = $('#cont-incluso').offset().top -10;

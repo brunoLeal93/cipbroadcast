@@ -69,7 +69,8 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 50; }
 
 .nav-menu-2 {
   position: inherit; }
@@ -158,10 +159,10 @@ p {
 .slider {
   background: url(../images/bpro4.png) no-repeat;
   background-size: cover;
-  min-height: 800px; }
+  min-height: 500px; }
   @media (max-width: 992px) {
     .slider {
-      min-height: 700px; } }
+      min-height: 400px; } }
 
 .btn-outline-light {
   padding: 10px 16px; }
@@ -193,7 +194,7 @@ p {
     margin: 0 !important; } }
 
 .btn-group {
-  width: 100%; }
+  width: 70%; }
   @media (max-width: 576px) {
     .btn-group {
       display: block; } }
@@ -274,7 +275,7 @@ p {
    ============================================================== */
 .styled-heading {
   text-align: center;
-  margin: 0 0 50px; }
+  margin: 15px 0 50px; }
   @media (max-width: 768px) {
     .styled-heading {
       margin: 0 0 30px; } }

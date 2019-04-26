@@ -33,70 +33,65 @@
 	</head>
 	<body id="body">
 		{%block nav %}
-		 <div class="nav-menu">
-        <div class="bg transition">
-            <div class="container-fluid fixed is-sticky">
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="{{url_for('home')}}">
-                                <b  style="font-family: flamablack italic">CIP</b>
-                                <img style="max-width:150px; max-height:75px; width: auto; height: auto;"src="../static/img/LOGO-BC-Institucional.png">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-menu"></span>
-                            </button>
-                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Financeiro
-                                        <span class="icon-arrow-down"></span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="{{url_for('bpro_terminal')}}">Terminais</a>
-                                            <a class="dropdown-item" href="#">Web</a>
-                                            <a class="dropdown-item" href="#">Wallboard</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agronegócios
-                                        <span class="icon-arrow-down"></span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Terminais</a>
-                                            <a class="dropdown-item" href="#">Web</a>
-                                            <a class="dropdown-item" href="#">Wallboard</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Político</a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Trading News</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
+		<div class="nav-menu">
+            <div class="bg transition">
+                <div class="container-fluid fixed is-sticky">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <a class="navbar-brand" href="{{url_for('home')}}">
+                                    <b  style="font-family: flamablack italic">CIP</b>
+                                    <img style="max-width:150px; max-height:75px; width: auto; height: auto;"src="../static/img/LOGO-BC-Institucional.png">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-menu"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Financeiro
+                                            <span class="icon-arrow-down"></span>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" href="{{url_for('bpro_terminal')}}">Desktop</a>
+                                                <a class="dropdown-item" href="#">Web</a>
+                                                <a class="dropdown-item" href="#">Wallboard</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agronegócios
+                                            <span class="icon-arrow-down"></span>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Desktop</a>
+                                                <a class="dropdown-item" href="#">Web</a>
+                                                <a class="dropdown-item" href="#">Wallboard</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Político</a>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Trading News</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
                                             <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Soluções
                                             <span class="icon-arrow-down"></span>
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                 <a class="dropdown-item" href="#">Data Feed</a>
-                                                <a class="dropdown-item" href="#">RI</a>
+                                                <a class="dropdown-item" href="#">Sites de RI</a>
                                                 <a class="dropdown-item" href="#">Ticker</a>
                                             </div>
                                         </li>
-                                    <li>
-                                        <input type="text" placeholder="Search...">
-                                        <div class="icon"></div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </nav>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 		{% endblock %}
 		{%block content%}{% endblock %}
         
